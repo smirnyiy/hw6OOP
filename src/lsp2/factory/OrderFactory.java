@@ -2,9 +2,10 @@ package lsp2.factory;
 
 import lsp2.model.Order;
 import lsp2.model.OrderBonus;
+import lsp2.model.Orderable;
 
 public class OrderFactory {
-    public Order create(int quantity, int price, boolean isBonus) {
+    public Orderable create(int quantity, int price, boolean isBonus) {
         if (isBonus) {
             return new OrderBonus(quantity, price);
         }

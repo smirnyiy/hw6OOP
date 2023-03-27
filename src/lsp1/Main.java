@@ -1,16 +1,22 @@
 package lsp1;
 
+import lsp1.shape.Quadrilaterial;
 import lsp1.shape.Rectangle;
 import lsp1.shape.Square;
 import lsp1.view.ShapeView;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle rectangle = new Square(5);
-        rectangle.setSideA(4);
-        rectangle.setSideB(5);
-        System.out.printf("В прямоугольнике сторона A = %d, сторона B = %d\n", rectangle.getSideA(), rectangle.getSideB());
-        ShapeView view = new ShapeView(rectangle);
+        Square square = new Square(5);
+        Rectangle rectangle = new Rectangle(4, 5);
+//        rectangle.setSideA(4);
+//        rectangle.setSideB(5);
+//        System.out.printf("Р’ РєРІР°РґСЂР°С‚Рµ СЃС‚РѕСЂРѕРЅР° A = %d, СЃС‚РѕСЂРѕРЅР° B = %d\n", square.getSide(), square.getSide());
+//        System.out.printf("Р’ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєРµ СЃС‚РѕСЂРѕРЅР° A = %d, СЃС‚РѕСЂРѕРЅР° B = %d\n", rectangle.getSideA(), rectangle.getSideB());
+        ShapeView view = new ShapeView(square);
+        ShapeView view1 = new ShapeView(rectangle);
+
         view.showArea();
+        view1.showArea();
     }
 }

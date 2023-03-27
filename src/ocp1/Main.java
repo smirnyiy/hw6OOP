@@ -14,16 +14,9 @@ public class Main {
         shapes.add(new Square(4));
         double sumArea = 0;
         for (Shape shape : shapes) {
-            if (shape instanceof RightTriangle) {
-                RightTriangle triangle = (RightTriangle) shape;
-                sumArea += triangle.getLeg1() * triangle.getLeg2() / 2.0;
-            }
-            if (shape instanceof Square) {
-                Square square = (Square) shape;
-                sumArea += Math.pow(square.getSide(), 2);
-            }
+            sumArea += shape.getArea();
         }
 
-        System.out.printf("Сумма площадей фигур равна %f \n", sumArea);
+        System.out.printf("РЎСѓРјРјР° РїР»РѕС‰Р°РґРµР№ С„РёРіСѓСЂ СЂР°РІРЅР° %f \n", sumArea);
     }
 }

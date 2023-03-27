@@ -1,6 +1,6 @@
 package lsp1.shape;
 
-public class Rectangle {
+public class Rectangle implements Quadrilaterial {
     private int sideA;
     private int sideB;
 

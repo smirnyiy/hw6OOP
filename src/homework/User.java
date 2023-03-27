@@ -1,22 +1,26 @@
 package homework;
 
-public class User{
-    private final String name;
+import homework.util.Reportable;
+import homework.util.impl.UserReporter;
 
-    public User(String name){
+public class User {
+    private final String name;
+    private final Reportable<User> reporter;
+
+    public User(String name, Reportable<User> reporter){
         this.name = name;
+        this.reporter = reporter;
+    }
+
+    public User(String name) {
+        this(name, new UserReporter());
     }
 
     public String getName(){
         return name;
     }
 
-    public void save(){
-        Persister persister = new Persister(this);
-        persister.save();
-    }
-
     public void report(){
-        System.out.println("Report for user: " + name);
+        reporter.report(this);
     }
 }

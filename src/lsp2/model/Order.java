@@ -1,6 +1,6 @@
 package lsp2.model;
 
-public class Order {
+public class Order implements Orderable {
     private final int price;
     private final int quantity;
 
@@ -15,6 +15,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Количество = %d, Цена = %d", quantity, price);
+        return String.format("РљРѕР»РёС‡РµСЃС‚РІРѕ = %d, Р¦РµРЅР° = %d", quantity, price);
     }
 }

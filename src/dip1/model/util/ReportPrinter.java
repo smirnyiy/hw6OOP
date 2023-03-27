@@ -4,7 +4,7 @@ import dip1.model.ReportItem;
 
 import java.util.List;
 
-public class ReportPrinter {
+public class ReportPrinter implements Printer<ReportItem> {
     public void output(List<ReportItem> items) {
         System.out.println("Output to printer");
         for (ReportItem item : items) {

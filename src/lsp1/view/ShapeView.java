@@ -1,16 +1,17 @@
 package lsp1.view;
 
+import lsp1.shape.Quadrilaterial;
 import lsp1.shape.Rectangle;
 
 public class ShapeView {
-    private final Rectangle rectangle;
+    private final Quadrilaterial quadrilaterial;
 
-    public ShapeView(Rectangle rectangle) {
-        this.rectangle = rectangle;
+    public ShapeView(Quadrilaterial quadrilaterial) {
+        this.quadrilaterial = quadrilaterial;
     }
 
     public void showArea() {
-        System.out.print("Площадь прямоугольника равна:");
-        System.out.println(rectangle.getArea());
+        System.out.print("РџР»РѕС‰Р°РґСЊ С‡РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРєР° СЂР°РІРЅР°:");
+        System.out.println(quadrilaterial.getArea());
     }
 }
